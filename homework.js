@@ -39,10 +39,20 @@ for (let counter = 0; counter < 5; counter++){
 // write a function called shortWords that takes an array of words and then
 // returns a new array with only the words that are 3 letters long or less
 // call your function on this array ["basin", "pit", "cheese", "bun", "river"]
-function shortWords(array) {
-  var str = "basin", "pit", "cheese", "bun", "river")
-  var res = str.split(" ", 3)
+function shortWords(words) {
+  // the above creates an empty array that will be called newWords
+  let newWords = [] 
+  for (let word of words) {
+  // creates a for loop that will check each word in the original array
+    if (word.length <= 3 ) {
+      // creates an if statement that checks the length of each word in the original array Words
+      // then pushes the word to the newWords array that is less than or equal to 3 characters 
+      newWords.push(word)
+      // this will push the words that pass into a new array called newWords
+    }
   }
-  return newArray;
+  return newWords;
 }
-console.log("basin", "pit", "cheese", "bun", "river")
+let arrayWords = ["basin", "pit", "cheese", "bun", "river"]
+console.log(shortWords(arrayWords))
+//  QUESTION OF WHERE IT EXPLICITLY STATES arrayWords AND HOW IT KNOWS WHAT TO DO
